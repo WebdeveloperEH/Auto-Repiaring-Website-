@@ -1,0 +1,741 @@
+/* Custom CSS for the Hero Section */
+
+:root {
+    --primary-color: #dc3545; /* Red from Bootstrap's danger class */
+    --overlay-color1: rgba(39, 48, 59, 0.85); /* Dark blue/black overlay */
+    --text-color: #ffffff;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    /* Set the hero to cover the full viewport height */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Replace 'path/to/your/image.jpg' with the actual image URL */
+    background-image: url('imag/bg.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Dark Overlay for better text readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color1) !important;
+    z-index: 1;
+}
+
+/* Bring content above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 56px; /* Space for fixed navbar */
+}
+
+/* Adjustments for the main title on smaller screens */
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 992px) {
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+}
+
+/* Small Tagline Styling */
+.expert-tagline {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Statistics Styling */
+.stat-item {
+    margin: 15px 0;
+    padding: 0 10px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background for the navbar */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--text-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 1;
+}
+
+.book-now-btn {
+    border-radius: 0; /* Match the square button style */
+}
+
+/* About us  */
+
+/* Custom CSS for the About Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background from the image */
+    --card-bg: #1a1e24; /* Slightly lighter dark for cards/features */
+    --primary-color: #dc3545; /* Red from Bootstrap's danger class */
+    --border-color: #333;
+}
+
+/* Apply background to the entire section container */
+#about-us {
+    background-color: var(--bg-dark);
+}
+
+/* Custom styling for the feature cards */
+.feature-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color) !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect on cards for a dynamic feel */
+.feature-card:hover {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Styling for the small descriptive text in the cards */
+.feature-card .small-text {
+    font-size: 0.9rem;
+}
+
+/* Ensure the checkmarks in the list are visible */
+.key-points-list li {
+    font-size: 1.05rem;
+}
+
+/* Ensure text elements remain dark/muted for contrast */
+.text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* Ensure headers are white */
+.text-white {
+    color: #ffffff !important;
+}
+/* Additional CSS for the JavaScript hover effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.15s ease;
+}
+
+/* Services */
+
+/* Custom CSS for the Services Section */
+
+:root {
+    --bg-dark: #12151c; /* Main background color (deep dark blue/black) */
+    --card-bg: #1a1e24; /* Slightly lighter dark for the cards */
+    --primary-color: #dc3545; /* Red (matching Bootstrap's danger/your theme) */
+    --text-muted-color: #b0b0b0;
+}
+
+/* Apply background to the entire section container */
+#our-services {
+    background-color: var(--bg-dark);
+}
+
+/* Ensure headings use the theme color */
+#our-services .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Custom styling for the service cards */
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid transparent; /* Base border for transition */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Image scaling effect on hover */
+.service-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.service-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Wrapper to handle image overflow and ensure a consistent image height */
+.card-image-wrapper {
+    height: 200px; /* Adjust height as needed for aspect ratio */
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    transition: transform 0.4s ease; /* Transition for the zoom effect */
+}
+
+/* List styling */
+.service-list {
+    margin-bottom: 0;
+}
+.service-list li {
+    padding-left: 0;
+    margin-bottom: 5px;
+    color: var(--text-muted-color) !important;
+    font-size: 0.9rem;
+}
+
+/* Text adjustments */
+.small-text {
+    font-size: 0.9rem;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+/* Optional: Stronger shadow effect */
+.service-card.active-hover {
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2); /* Red shadow on JS hover */
+}
+
+/* Why Chooce Us */
+
+/* Custom CSS for the Why Choose Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background color (based on your previous sections) */
+    --primary-color: #dc3545; /* Red (Bootstrap danger) */
+    --text-muted-color: #b0b0b0;
+}
+
+/* Apply background to the entire section container */
+#why-choose-us {
+    background-color: var(--bg-dark);
+}
+
+/* Styling for the circular icon background */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Feature box container (used for dynamic effects) */
+.feature-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dynamic Hover Effect (CSS-based) */
+.feature-box:hover {
+    transform: translateY(-5px); /* Lift the box slightly */
+}
+
+.feature-box:hover .icon-circle {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.6);
+}
+
+.feature-box:hover .icon-circle i {
+    color: var(--bg-dark) !important; /* Change icon color to dark when hovered */
+}
+
+
+/* Text adjustments */
+.small-text {
+    font-size: 0.9rem;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.text-danger {
+    color: var(--primary-color) !important;
+}
+/* Work */
+
+/* Custom CSS for the Our Work Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background color */
+    --primary-color: #dc3545; /* Red (Bootstrap primary/your theme) */
+    --text-muted-color: #b0b0b0;
+    --overlay-color: rgba(220, 53, 69, 0.7); /* Red overlay with transparency */
+}
+
+/* Apply background to the entire section container */
+#our-work {
+    background-color: var(--bg-dark);
+}
+
+/* Ensure headings use the theme color */
+#our-work .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Styling for individual work items */
+.work-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    line-height: 0; /* Remove extra space below images */
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease; /* Smooth zoom effect */
+}
+
+/* Overlay for hover effect */
+.work-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease; /* Smooth fade in/out */
+}
+
+.work-item .overlay i {
+    color: white; /* Icon color */
+    transform: scale(0.8); /* Start smaller */
+    transition: transform 0.4s ease; /* Icon grow effect */
+}
+
+/* Hover effects */
+.work-item:hover img {
+    transform: scale(1.1); /* Zoom in image */
+}
+
+.work-item:hover .overlay {
+    opacity: 1; /* Show overlay */
+}
+
+.work-item:hover .overlay i {
+    transform: scale(1); /* Grow icon to normal size */
+}
+
+/* Text adjustments */
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+/* Follow our Jurny */
+
+/* Custom CSS for the Follow Our Journey Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background color */
+    --box-bg: #1a1e24; /* Slightly lighter dark for the box */
+    --primary-color: #dc3545; /* Red (Bootstrap danger) */
+    --text-muted-color: #b0b0b0;
+}
+
+/* Apply background to the entire section container */
+#follow-journey {
+    background-color: var(--bg-dark);
+}
+
+/* Styling for the central Instagram box */
+.instagram-box {
+    background-color: var(--box-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle light border */
+}
+
+/* Styling for the icon circle */
+.instagram-icon-circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the icon/box (dynamic touch) */
+.instagram-box:hover .instagram-icon-circle {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.5);
+}
+
+/* Styling for the follow button */
+.follow-btn {
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Text adjustments */
+.small-note {
+    font-size: 0.8rem;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.text-danger {
+    color: var(--primary-color) !important;
+}
+
+/* Booking sections */
+
+/* Custom CSS for the Booking Section */
+
+:root {
+    --bg-light: #12151C; /* Light background for the section */
+    --card-bg: #302f2f; /* White background for the card */
+    --primary-color1: #dc3545; /* Red (Bootstrap danger) */
+    --text-muted-color1: rgb(255, 250, 250);
+    --step-bg: #f9f9f9; /* Subtle background for the steps list */
+}
+
+/* Apply light background to the entire section container */
+#booking-section {
+    background-color: var(--bg-light);
+}
+
+/* Styling for the small "Book Now" pill */
+.book-now-tagline {
+    display: inline-block;
+    padding: 3px 12px;
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+/* Feature List Checkmarks */
+.feature-list li {
+    font-size: 1.05rem;
+    color: rgb(255, 254, 254); /* Darker text for features */
+}
+
+/* Phone Number Styling */
+.phone-number {
+    letter-spacing: -1px;
+    color: #fff4f4;
+}
+
+/* --- Booking Card Styling (Right Side) --- */
+
+.booking-card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(191, 191, 191, 0.08) !important;
+}
+
+/* Icon Placeholder Circle */
+.icon-placeholder-circle {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #f9dedf; /* Very light red/orange border */
+    background-color: #fff4f4; /* Very light red/orange background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Steps Integration Area */
+.integration-area {
+    background-color: var(--step-bg);
+}
+
+.booking-steps li {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Text adjustments */
+.text-muted {
+    color: var(--text-muted-color1) !important;
+}
+
+.text-danger {
+    color: var(--primary-color1) !important;
+}
+
+/* Testimonial sections */
+
+/* Custom CSS for the Testimonials Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background color */
+    --card-bg: #1a1e24; /* Slightly lighter dark for the cards */
+    --primary-color: #dc3545; /* Red (Bootstrap danger) */
+    --text-muted-color: #b0b0b0;
+    --border-color-subtle: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply background to the entire section container */
+#testimonials {
+    background-color: var(--bg-dark);
+}
+
+/* Ensure headings use the theme color */
+#testimonials .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Styling for the testimonial cards */
+.testimonial-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color-subtle);
+    transition: all 0.3s ease;
+    text-align: left; /* Align text within the card as shown in the image */
+}
+
+/* Dynamic Hover Effect */
+.testimonial-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px); /* Subtle lift */
+}
+
+/* Rating Stars */
+.rating-stars i {
+    font-size: 1rem;
+}
+
+/* Quote Text */
+.quote-text {
+    font-size: 1rem;
+    color: white; /* Quote text remains bright for readability */
+}
+
+/* Author Info Separator */
+.author-info {
+    border-color: var(--border-color-subtle) !important;
+}
+
+/* Text adjustments */
+.small-text {
+    font-size: 0.9rem;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+/* Contact Us  */
+
+/* Custom CSS for the Contact Us Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background color */
+    --form-bg: #1a1e24; /* Darker background for form container */
+    --input-bg: #272c35; /* Even darker for input fields */
+    --primary-color: #dc3545; /* Red (Bootstrap danger) */
+    --text-muted-color: #b0b0b0;
+    --border-color-subtle: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply dark background to the entire section container */
+#contact-us {
+    background-color: var(--bg-dark);
+}
+
+/* Styling for the contact list icons and text */
+.contact-list li {
+    font-size: 1.1rem;
+    display: flex; /* Use flex for alignment */
+    align-items: flex-start;
+}
+
+.contact-list li i {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    padding-top: 3px;
+    font-size: 1.25rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+}
+
+/* --- Contact Form Styling (Right Side) --- */
+
+.contact-form {
+    background-color: var(--form-bg);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the form controls (inputs and textarea) */
+.form-control {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color-subtle);
+    color: white; /* Text input color */
+    padding: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted-color);
+    opacity: 0.7;
+}
+
+/* Send Message Button */
+.send-message-btn {
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Map Placeholder */
+.map-placeholder iframe {
+    border-radius: 8px;
+    /* Map is sized by its own width/height attributes, but this ensures border-radius works */
+}
+
+/* General Text Color Overrides */
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.text-danger {
+    color: var(--primary-color) !important;
+}
+
+/* Footer */
+
+/* Custom CSS for the Footer Section */
+
+:root {
+    --bg-dark: #12151c; /* Main dark background (from previous sections) */
+    --footer-bg: #1a1e24; /* Slightly lighter dark for the main footer body */
+    --copyright-bg: #12151c; /* Main dark background for the bottom bar */
+    --primary-color: #dc3545; /* Red (Bootstrap danger/your theme) */
+    --text-muted-color: #b0b0b0;
+    --border-color-subtle: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply background to the entire footer container */
+#main-footer {
+    background-color: var(--footer-bg);
+}
+
+/* Style for footer headings */
+.footer-heading {
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Style for links in lists */
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--text-muted-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Dynamic Hover Effect for Links */
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Icons Styling */
+.social-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--border-color-subtle);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Dynamic Hover Effect for Social Icons */
+.social-icon:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Copyright Bar Styling */
+.copyright-bar {
+    background-color: var(--copyright-bg);
+    border-top: 1px solid var(--border-color-subtle);
+}
+
+/* General Text Color Overrides */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.small-text {
+    font-size: 0.9rem;
+}
